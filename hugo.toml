@@ -1,0 +1,109 @@
+title = "Moto Diaries"
+baseURL = 'https://motodiaries.gr/'
+
+# This is what goes in <html lang="">
+languageCode = 'el'
+
+# This defines how dates are formatted
+defaultContentLanguage = "el"
+
+# Enable emojis globally
+enableEmoji = true
+ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
+
+# traditional way: theme component resides in directory 'themes'
+theme = "hugo-blog-awesome"
+
+[services]
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable Google Analytics, simply leave the field empty or remove the next two lines
+  [services.googleAnalytics]
+    id = '' # G-MEASUREMENT_ID
+
+# To enable Disqus comments, provide Disqus Shortname below.
+# To disable Disqus comments, simply leave the field empty or remove the next two lines
+  [services.disqus]
+    shortname = ''
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
+
+############################## Greek language ################################
+[Languages.el]
+  languageName = "Ελληνικά"
+  languageCode = "el"
+  contentDir = "content/el"
+  weight = 1
+
+  [Languages.el.menu]
+  [[Languages.el.menu.main]]
+    pageRef="/"
+    name = 'Αρχική'
+    url = '/'
+    weight = 10
+  [[Languages.el.menu.main]]
+    pageRef="/tags/helmet_thoughts"
+    name = 'Σκέψεις_Κράνους'
+    url = '/tags/helmet_thoughts'
+    weight = 20
+  [[Languages.el.menu.main]]
+    pageRef="/tags/travels"
+    name = 'Ταξίδια'
+    url = '/tags/travels'
+    weight = 30
+  [[Languages.el.menu.main]]
+    pageRef="manifesto"
+    name = 'Μανιφέστο'
+    url = '/manifesto/'
+    weight = 40
+
+[Languages.el.params]
+  sitename = "Moto Diaries"
+  defaultColor = "light"
+  description = "Helmet Thoughts and Travels"
+  mainSections = ['posts']
+  toc = true
+  tocOpen = false
+  goToTop = true
+  additionalScripts = ['js/custom.js', 'js/custom-2.js']
+  dateFormat = "2 January 2006"
+  rssFeedDescription = "summary"
+
+[Languages.el.params.author]
+  avatar = "avatar.jpg"
+  intro = "Που βρίσκομαι;"
+  name = "Andreas N"
+  description = "Οφείλουμε πάντα να πηγαίνουμε μπροστά, στην τύχη, ακόμα και στην πιο μικρή βόλτα, ορμώμενοι από το πνεύμα της αέναης περιπέτειας, αποφασισμένοι να μην επιστρέψουμε ποτέ.<br>- Henry David Thoreau"
+
+[Languages.el.params.webmanifest]
+  name = "sitename"
+  short_name = "sitename"
+  start_url = "/"
+  theme_color = "#434648"
+  background_color = "#fff"
+  display = "standalone"
+
+###################################################################
+
+# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
+[params]
+  defaultColor = "light"
+
+[params.browserconfig]
+  TileColor = "#2d89ef" # default windows 10 blue tile color
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/naf.andreas/"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "/index.xml"
